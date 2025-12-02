@@ -4,38 +4,65 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    android:background="#F5F5F5">
+    android:background="#E3F2FD"> <!-- azul clarinho -->
 
-    <EditText
-        android:id="@+id/edtNome"
+    <!-- Card para inputs -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome do contato"
-        android:padding="10dp"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/edtTelefone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telefone"
-        android:inputType="phone"
-        android:padding="10dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#FFFFFFFF"
+        android:elevation="6dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="10dp"
-        android:textSize="18sp" />
+        android:clipToOutline="true"
+        android:backgroundTint="#FFFFFF"
+        android:paddingBottom="25dp">
 
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Adicionar Contato"
-        android:textSize="18sp"
-        android:layout_marginTop="15dp" />
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome do contato"
+            android:padding="12dp"
+            android:background="#F1F8E9"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp" />
 
+        <EditText
+            android:id="@+id/edtTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefone"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:background="#F1F8E9"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adicionar Contato"
+            android:textSize="18sp"
+            android:background="#64B5F6"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="18dp"
+            android:padding="12dp"
+            android:elevation="3dp"/>
+    </LinearLayout>
+
+    <!-- Lista com fundo branco arredondado -->
     <ListView
         android:id="@+id/listContatos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        android:elevation="4dp"
+        android:clipToOutline="true" />
 
 </LinearLayout>
